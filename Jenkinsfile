@@ -47,5 +47,5 @@ pipeline{
        		bat "dotnet publish YourProjectPath\\Your_Project.csproj "
        	    }
 	}
-
+    }
  }
