@@ -8,7 +8,7 @@ pipeline{
     stages{
  	stage('Checkout') {
     	    steps {
-     		git credentialsId: 'CREDENTIAL_ID', url: 'REPO_URL', branch: 'Branch on which you want to set the CI'
+     		git credentialsId: 'github_login', url: 'https://github.com/karlardz2707/kontent-sample-app-net'
      	    }
   	}
 	
