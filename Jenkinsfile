@@ -14,37 +14,37 @@ pipeline{
 	
 	stage('Restore packages'){
    	    steps{
-      		bat "dotnet restore YourProjectPath\\Your_Project.csproj"
+      		bat "dotnet restore C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat\\DancingGoat.csproj"
      	    }
   	}
 
 	stage('Clean'){
     	    steps{
-        	bat "dotnet clean YourProjectPath\\Your_Project.csproj"
+        	bat "dotnet clean C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat\\DancingGoat.csproj"
      	    }
    	}
 
 	stage('Build'){
    	    steps{
-      		bat "dotnet build YourProjectPath\\Your_Project.csproj --configuration Release"
+      		bat "dotnet build C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat\\DancingGoat.csproj --configuration Release"
     	    }
 	}
 
 	stage('Test: Unit Test'){
    	    steps {
-     		bat "dotnet test YourProjectPath\\UnitTest_Project.csproj"
+     		bat "dotnet test C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests.cjproj"
      	    }
   	}
        
  	stage('Test: Integration Test'){
     	    steps {
-       		bat "dotnet test ProjectPath\\IntegrateTest_Project.csproj"
+       		bat "dotnet test C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests.cjproj"
       	    }
    	}
 
 	stage('Publish'){
      	    steps{
-       		bat "dotnet publish YourProjectPath\\Your_Project.csproj "
+       		bat "dotnet publish C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests.cjproj"
        	    }
 	}
     }
