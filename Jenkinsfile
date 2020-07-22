@@ -32,19 +32,19 @@ pipeline{
 
 	stage('Test: Unit Test'){
    	    steps {
-     		bat "dotnet test C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests.cjproj"
+     		bat "dotnet test C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests\\DancingGoat.Tests.csproj"
      	    }
   	}
        
  	stage('Test: Integration Test'){
     	    steps {
-       		bat "dotnet test C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests.cjproj"
+       		bat "dotnet test C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests\\DancingGoat.Tests.csproj"
       	    }
    	}
 
 	stage('Publish'){
      	    steps{
-       		bat "dotnet publish C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests.cjproj"
+       		bat "dotnet publish C:\\Users\\karla\\TEST_project\\kontent-sample-app-net\\DancingGoat.Tests\\DancingGoat.Tests.cjproj"
        	    }
 	}
     }
